@@ -13,7 +13,7 @@ MAINTAINER Steve Tsang <mylagimail2004@yahoo.com>
 
 # Download the Anaconda installer
 RUN apt-get update && apt-get install -y curl
-curl -o Anaconda2-4.3.1-Linux-x86_64.sh https://repo.continuum.io/archive/Anaconda2-4.3.1-Linux-x86_64.sh
+RUN curl -o Anaconda2-4.3.1-Linux-x86_64.sh https://repo.continuum.io/archive/Anaconda2-4.3.1-Linux-x86_64.sh
 
 # Make the installer executable
 RUN chmod u+x ./Anaconda2-4.3.1-Linux-x86_64.sh
