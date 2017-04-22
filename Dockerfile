@@ -12,28 +12,29 @@ MAINTAINER Steve Tsang <mylagimail2004@yahoo.com>
 # ------------------------------
 
 # Download the Anaconda installer
+RUN apt-get update && apt-get install -y curl
 curl -o Anaconda2-4.3.1-Linux-x86_64.sh https://repo.continuum.io/archive/Anaconda2-4.3.1-Linux-x86_64.sh
 
 # Make the installer executable
-chmod u+x ./Anaconda2-4.3.1-Linux-x86_64.sh
+RUN chmod u+x ./Anaconda2-4.3.1-Linux-x86_64.sh
 
 # Run the installer, accepting the defaults.
-./Anaconda2-4.3.1-Linux-x86_64.sh
+RUN ./Anaconda2-4.3.1-Linux-x86_64.sh
 
 # Add anaconda2/bin to your path (assumes default install location)
-export PATH=$HOME/anaconda2/bin:$PATH
+RUN export PATH=$HOME/anaconda2/bin:$PATH
 
 # Install additonal modules not shipped with Anaconda
-conda install -c conda-forge tensorflow
-conda install -c anaconda hdf5=1.8.17
-conda install -c anaconda theano
-conda install -c conda-forge keras=2
+RUN conda install -c conda-forge tensorflow
+RUN conda install -c anaconda hdf5=1.8.17
+RUN conda install -c anaconda theano
+RUN conda install -c conda-forge keras=2
 
 # Download the source files for the tutorial
-git clone https://github.com/ECP-Candle/workshop
+RUN git clone https://github.com/ECP-Candle/workshop
 
 # Run candle benchmark P1B1 as a test
-git clone https://github.com/ECP-Candle/benchmarks
-pushd benchmarks/Pilot1/P1B1/
-python p1b1_baseline_keras2.py
-popd
+#git clone https://github.com/ECP-Candle/benchmarks
+#pushd benchmarks/Pilot1/P1B1/
+#python p1b1_baseline_keras2.py
+#popd
