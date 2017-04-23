@@ -31,7 +31,7 @@ RUN conda install -c anaconda theano
 RUN conda install -c conda-forge keras=2
 
 # Download the source files for the tutorial
-RUN git clone https://github.com/ECP-Candle/workshop
+# git clone https://github.com/ECP-Candle/workshop
 
 # Run candle benchmark P1B1 as a test
 #git clone https://github.com/ECP-Candle/benchmarks
