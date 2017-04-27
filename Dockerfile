@@ -25,10 +25,10 @@ RUN ./Anaconda2-4.3.1-Linux-x86_64.sh
 RUN export PATH=$HOME/anaconda2/bin:$PATH
 
 # Install additonal modules not shipped with Anaconda
-RUN conda install -c conda-forge tensorflow
-RUN conda install -c anaconda hdf5=1.8.17
-RUN conda install -c anaconda theano
-RUN conda install -c conda-forge keras=2
+#RUN conda install -c conda-forge tensorflow
+#RUN conda install -c anaconda hdf5=1.8.17
+#RUN conda install -c anaconda theano
+#RUN conda install -c conda-forge keras=2
 
 # Download the source files for the tutorial
 # git clone https://github.com/ECP-Candle/workshop
