@@ -5,25 +5,25 @@
 # Set the base image to Ubuntu:latest Python 3.5.2
 FROM stevetsa/ubuntu-python:3.5.2
 # File/Author / Maintainer
-MAINTAINER Steve Tsang <mylagimail2004@yahoo.com>
+#MAINTAINER Steve Tsang <mylagimail2004@yahoo.com>
 # Updates and Installs
 
 # Set up your python environment
 # ------------------------------
 
 # Download the Anaconda installer
-RUN apt-get update
-RUN apt-get install -y curl
-RUN curl -o Anaconda2-4.3.1-Linux-x86_64.sh https://repo.continuum.io/archive/Anaconda2-4.3.1-Linux-x86_64.sh
+#RUN apt-get update
+#RUN apt-get install -y curl
+#RUN curl -o Anaconda2-4.3.1-Linux-x86_64.sh https://repo.continuum.io/archive/Anaconda2-4.3.1-Linux-x86_64.sh
 
 # Make the installer executable
-RUN chmod u+x ./Anaconda2-4.3.1-Linux-x86_64.sh
+#RUN chmod u+x ./Anaconda2-4.3.1-Linux-x86_64.sh
 
 # Run the installer, accepting the defaults.
-RUN ./Anaconda2-4.3.1-Linux-x86_64.sh
+#RUN ./Anaconda2-4.3.1-Linux-x86_64.sh
 
 # Add anaconda2/bin to your path (assumes default install location)
-RUN export PATH=$HOME/anaconda2/bin:$PATH
+#RUN export PATH=$HOME/anaconda2/bin:$PATH
 
 # Install additonal modules not shipped with Anaconda
 #RUN conda install -c conda-forge tensorflow
