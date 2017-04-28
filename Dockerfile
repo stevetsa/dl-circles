@@ -12,9 +12,9 @@ FROM stevetsa/ubuntu-python:3.5.2
 # ------------------------------
 
 # Download the Anaconda installer
-#RUN apt-get update
-#RUN apt-get install -y curl
-#RUN curl -o Anaconda2-4.3.1-Linux-x86_64.sh https://repo.continuum.io/archive/Anaconda2-4.3.1-Linux-x86_64.sh
+RUN apt-get update
+RUN apt-get install -y curl
+RUN curl -o Anaconda2-4.3.1-Linux-x86_64.sh https://repo.continuum.io/archive/Anaconda2-4.3.1-Linux-x86_64.sh
 
 # Make the installer executable
 #RUN chmod u+x ./Anaconda2-4.3.1-Linux-x86_64.sh
