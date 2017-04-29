@@ -4,7 +4,7 @@
 ##################################################################
 # Set the base image to Ubuntu:latest Python 3.5.2
 #FROM stevetsa/ubuntu-python:3.5.2
-FROM continuumio/miniconda
+FROM continuumio/anaconda
 # File/Author / Maintainer
 #MAINTAINER Steve Tsang <mylagimail2004@yahoo.com>
 # Updates and Installs
@@ -12,7 +12,8 @@ FROM continuumio/miniconda
 # ------------------------------
 
 # Download the Anaconda installer
-#RUN apt-get update
+RUN apt-get update
+#RUN apt-get build-dep python-matplot python-dev python-pip python-pyrex unzip
 #RUN apt-get install -y curl
 #RUN curl -o Anaconda2-4.3.1-Linux-x86_64.sh https://repo.continuum.io/archive/Anaconda2-4.3.1-Linux-x86_64.sh
 # Make the installer executable
