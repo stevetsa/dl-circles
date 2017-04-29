@@ -13,6 +13,7 @@ FROM continuumio/anaconda
 
 # Download the Anaconda installer
 RUN apt-get update
+RUN apt-get install python-qt4
 #RUN apt-get build-dep python-matplot python-dev python-pip python-pyrex unzip
 #RUN apt-get install -y curl
 #RUN curl -o Anaconda2-4.3.1-Linux-x86_64.sh https://repo.continuum.io/archive/Anaconda2-4.3.1-Linux-x86_64.sh
